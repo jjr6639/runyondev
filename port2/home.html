@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Space-Themed Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+    body {
+        background: linear-gradient(135deg, #0a0c27, #1c1f57);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #0a0c27, #1c1f57);
+        z-index: -1;
+        animation: animateStars 50s linear infinite;
+    }
+
+    @keyframes animateStars {
+        0% {
+            background-position: 0 0, 0 0;
+        }
+        100% {
+            background-position: 10000px 10000px, 0 0;
+        }
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.3);
+        width: 300px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+        animation: animateGlow 5s linear infinite;
+    }
+
+    @keyframes animateGlow {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 24px;
+        background: linear-gradient(135deg, #ff00cc, #3333ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .card-body p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .card-footer {
+        margin-top: 20px;
+    }
+
+    .card-footer button {
+        background: linear-gradient(135deg, #ff00cc, #3333ff);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.5s;
+    }
+
+    .card-footer button:hover {
+        background: linear-gradient(135deg, #3333ff, #ff00cc);
+    }
+
+</style>
+<div class="card">
+    <div class="card-header">
+        <h2>Galactic Explorer</h2>
+    </div>
+    <div class="card-body">
+        <p>Embark on an interstellar journey through the cosmos. Discover new worlds, encounter alien species, and explore the unknown.</p>
+    </div>
+    <div class="card-footer">
+        <button>Join Now</button>
+    </div>
+</div>
+</body>
+</html>

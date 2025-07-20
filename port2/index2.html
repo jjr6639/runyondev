@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Runyon Developer</title>
+    <link rel="stylesheet" type="text/css" href="indexv2.css">
+</head>
+<body>
+<div id="progressbar"></div>
+<div id="scrollPath"></div>
+
+
+<header>
+    <img src="Pegaseye%20(6).png" alt="Logo" class="logo-image">
+    <ul>
+        <li><a href="#" class="active">Home</a> </li>
+        <li><a href="#">Skills</a> </li>
+        <li><a href="#">Projects</a> </li>
+        <li><a href="#">Contact</a> </li>
+    </ul>
+</header>
+
+<main>
+    <section id="home">
+        <h1>Welcome To My Developer Site!</h1>
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>About Me</h4>
+                            <p>Aspiring Web Developer and UX/UI Designer</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2" checked>
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>Education</h4>
+                            <p>Bachelor of Science in Information Science and Technology/Design and Dev. Option @Penn State University '25</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3" checked>
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>Daily Weather</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4" checked>
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Tech Blog</h4>
+                            <p>Latest Tech News and Trends</p>
+                        </div>
+                    </div>
+
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+
+        </ul>
+
+    </section>
+
+    <section id="projects">
+        <h1>This site is a working progress and my first dev project. Expect flaws and missing content until I add more </h1>
+        <p></p>
+    </section>
+
+    <section id="contact">
+
+
+        </div>
+        <div class="logreg-box center-text">
+            <div class="form-box login">
+                <form action="/signup" method="post" id="signup-form">
+                    <h2>Contact Me</h2>
+                    <div class="input-box">
+                        <input type="text" id="firstName" required>
+                        <label>First Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="lastName" required>
+                        <label>Last Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="Subject" required>
+                        <label>Subject</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="Message" required>
+                        <label>Type Message Here</label>
+                    </div>
+                    <button type="submit" class="btn">Blast Off!</button>
+                </form>
+            </div>
+
+    </section>
+
+</main>
+
+<!--
+   - #FOOTER
+ -->
+
+<footer class="footer">
+    <div class="container">
+
+        <p class="h1 logo">
+            <a href="Pegaseye (6).png">
+                <span>.</span>
+            </a>
+        </p>
+
+        <p class="copyright">
+            &copy; 2024 <a href="#">AphelionX</a>. All rights reserved
+        </p>
+
+    </div>
+</footer>
+
+<script type="text/javascript">
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+        window.addEventListener('DOMContentLoaded', function() {
+            const lastSection = document.getElementById('contact');
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+            lastSection.style.height = `calc(100vh - 160px - ${scrollbarWidth}px)`;
+        });
+
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

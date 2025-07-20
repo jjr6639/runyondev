@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code IDE Card</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .ide-card {
+            width: 400px;
+            border: 1px solid #3c3c3c;
+            border-radius: 8px;
+            background-color: #252526;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .ide-header {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background-color: #333333;
+        }
+
+        .ide-header .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .ide-header .dot.red {
+            background-color: #ff5f56;
+        }
+
+        .ide-header .dot.yellow {
+            background-color: #ffbd2e;
+        }
+
+        .ide-header .dot.green {
+            background-color: #27c93f;
+        }
+
+        .ide-header span {
+            margin-left: auto;
+            margin-right: auto;
+            color: #c5c5c5;
+            font-size: 14px;
+        }
+
+        .ide-content {
+            padding: 16px;
+        }
+
+        .line {
+            margin: 4px 0;
+        }
+
+        .line .line-number {
+            display: inline-block;
+            width: 32px;
+            color: #858585;
+            text-align: right;
+            margin-right: 8px;
+        }
+
+        .line .code {
+            color: #dcdcaa;
+        }
+
+        .line .comment {
+            color: #6a9955;
+        }
+    </style>
+</head>
+<body>
+<div class="ide-card">
+    <div class="ide-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span>index.html</span>
+    </div>
+    <div class="ide-content">
+        <div class="line"><span class="line-number">1</span><span class="code">&lt;!DOCTYPE html&gt;</span></div>
+        <div class="line"><span class="line-number">2</span><span class="code">&lt;html lang="en"&gt;</span></div>
+        <div class="line"><span class="line-number">3</span><span class="code">&lt;head&gt;</span></div>
+        <div class="line"><span class="line-number">4</span><span class="code">  &lt;!-- This is a comment --&gt;</span><span class="comment"></span></div>
+        <div class="line"><span class="line-number">5</span><span class="code">&lt;/head&gt;</span></div>
+        <div class="line"><span class="line-number">6</span><span class="code">&lt;body&gt;</span></div>
+        <div class="line"><span class="line-number">7</span><span class="code">&lt;/body&gt;</span></div>
+        <div class="line"><span class="line-number">8</span><span class="code">&lt;/html&gt;</span></div>
+    </div>
+</div>
+</body>
+</html>

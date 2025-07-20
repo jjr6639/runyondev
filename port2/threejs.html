@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Runyon Developer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    #projects {
+      background: linear-gradient(to top, #242423, #10002b);
+      color: white; /* Adjusts the text color for better readability */
+      position: relative;
+      height: 100vh; /* Set height to ensure there's enough room for tilting effect */
+      overflow: hidden; /* Prevents scrolling caused by the moving 3D elements */
+    }
+    #skills {
+      background: linear-gradient(to top, #10002b, #111);
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      padding-top: 30px;
+    }
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 100px; /* Adjust this value to move the h1 up or down */
+    }
+    .text-gradient {
+      /* Add your gradient styling for text here if needed */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Pegaseye%20(6).png" alt="Logo" class="logo-image">
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Skills</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <section id="home">
+    <h1 class="text-gradient">Welcome To My Developer Site!</h1>
+    <div class="profile_card">
+      <div class="lines"></div>
+      <div class="imgBx">
+        <img src="../untitled14/profileJRpic.jpeg" alt="person-image">
+      </div>
+      <div class="content">
+        <div class="details">
+          <h2 class="text-gradient">
+            Jordan Runyon <br><span>Web Dev and UX/UI Design</span>
+          </h2>
+          Education: PennState, B.A. Information Science and Technology
+          <div class="data">
+            <h3>342<br><span>Posts</span></h3>
+            <h3>120k<br><span>Followers</span></h3>
+            <h3>285<br><span>Following</span></h3>
+          </div>
+          <div class="actionBtn">
+            <button>Follow</button>
+            <button>Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h1 class="text-gradient">Skills</h1>
+    <ul>
+      <!-- Your skills list here -->
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h1 class="text-gradient">Projects</h1>
+    <!-- The Three.js canvas will be appended here -->
+  </section>
+
+  <section id="contact">
+    <!-- Contact form structure -->
+  </section>
+</main>
+
+<footer>
+  <h4>Powered By AphelionX</h4>
+  <a href="https://github.com/jjr6639" target="_blank"><img src="blue.png" alt="GitHub"></a>
+  <a href="https://linkedin.com/in/jordan-runyon" target="_blank"><img src="LinkedInLogo.png" alt="LinkedIn"></a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+    renderer.setSize(window.innerWidth, 400); // Adjust as needed
+    document.getElementById('projects').appendChild(renderer.domElement);
+
+    const geometry = new THREE.PlaneGeometry( 5, 5 );
+    const material = new THREE.MeshBasicMaterial( {color: 0x00ff00, side: THREE.DoubleSide} );
+    const plane = new THREE.Mesh( geometry, material );
+    scene.add( plane );
+
+    camera.position.z = 10;
+
+    const animate = function () {
+      requestAnimationFrame( animate );
+      renderer.render( scene, camera );
+    };
+
+    animate();
+  });
+</script>
+
+</body>
+</html>
+
+
+
