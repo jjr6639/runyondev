@@ -23,11 +23,6 @@ This portfolio is a modern, interactive, and space-themed web project showcasing
 /homedex.html → Main portfolio page
 /styles.css → External styles (linked in HTML)
 
-yaml
-Copy
-Edit
-
----
 
 ## 🛠️ Technologies Used
 
@@ -52,20 +47,12 @@ Background image: dark space scene.webp
 
 Logo image: Jordan Runyon Developer Portfolio (1).png
 
-3️⃣ Open index.html in your browser:
+3️⃣ Open homedex.html in your browser:
 
-bash
-Copy
-Edit
-open index.html
-✨ Customization
-You can customize:
 
 Words in the typewriter effect → Edit the words array in the <script> tag
 
 Skill logos → Update or add new images inside the .skills-grid div
-
-About section → Write your personal description
 
 Projects section → Add project details or cards
 
@@ -76,18 +63,6 @@ If you’d like to reach out, use the Contact form on the page (email integratio
 This project is licensed for personal use. If you want to fork or reuse, credit appreciated!
 
 🚀 Created with passion by Jordan Runyon
-yaml
-Copy
-Edit
-
----
-
-✅ **If you want**, I can also help:
-- Write installation instructions for deployment (Netlify, GitHub Pages, Vercel)  
-- Add example screenshots or demo GIFs  
-- Write a smaller “short version” README  
-
-Want me to prep one of those? Let me know! 🚀✨
 
 
 
@@ -96,4 +71,4 @@ Want me to prep one of those? Let me know! 🚀✨
 
 
 
-Ask ChatGPT
+
